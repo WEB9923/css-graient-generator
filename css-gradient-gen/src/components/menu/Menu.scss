@@ -1,0 +1,97 @@
+@import "../../Variables.scss";
+
+.menu {
+  width: 450px;
+  height: auto;
+  background-color: $bg;
+  border-radius: $medium;
+  position: absolute;
+  right: 45px;
+  top: 65px;
+  padding: 10px 15px;
+  font-family: $font;
+  animation: menuAnimation .5s ease;
+  display: none;
+
+  &.showMenu {
+    display: block;
+  }
+
+  h2 {
+    font-family: $titleFont;
+    color: $color;
+    text-transform: capitalize;
+    text-align: center;
+    user-select: none;
+  }
+
+  .generator {
+    padding: 40px 15px;
+
+    .colors {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      div {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        .color {
+          width: 25px;
+          height: 25px;
+          border-radius: $extraLarge;
+        }
+
+        p {
+          color: $color;
+          font-size: $medium;
+          font-weight: 700;
+
+          &::selection {
+            background-color: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    button {
+      padding: 10px 25px;
+      border-radius: $medium;
+      border: none;
+      outline: none;
+      background: radial-gradient(ellipse at top, #4b87c9, transparent),
+      radial-gradient(ellipse at bottom, #7f4bbe, transparent);;
+      font-size: $medium;
+      font-weight: 700;
+      color: $white;
+      margin: 20px auto;
+      display: block;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:active {
+        scale: .85;
+      }
+    }
+  }
+}
+
+@keyframes menuAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+

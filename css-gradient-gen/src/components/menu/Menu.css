@@ -1,0 +1,84 @@
+.menu {
+  width: 450px;
+  height: auto;
+  background-color: #f5f5f5;
+  border-radius: 18px;
+  position: absolute;
+  right: 45px;
+  top: 65px;
+  padding: 10px 15px;
+  font-family: "Poppins";
+  animation: menuAnimation 0.5s ease;
+  display: none;
+}
+.menu.showMenu {
+  display: block;
+}
+.menu h2 {
+  font-family: "Mitr";
+  color: #635e5e;
+  text-transform: capitalize;
+  text-align: center;
+  user-select: none;
+}
+.menu .generator {
+  padding: 40px 15px;
+}
+.menu .generator .colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.menu .generator .colors div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.menu .generator .colors div .color {
+  width: 25px;
+  height: 25px;
+  border-radius: 28px;
+}
+.menu .generator .colors div p {
+  color: #635e5e;
+  font-size: 18px;
+  font-weight: 700;
+}
+.menu .generator .colors div p::selection {
+  background-color: #6565c6;
+  color: #f7f7f7;
+}
+.menu .generator button {
+  padding: 10px 25px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  background: radial-gradient(ellipse at top, #4b87c9, transparent), radial-gradient(ellipse at bottom, #7f4bbe, transparent);
+  font-size: 18px;
+  font-weight: 700;
+  color: #f7f7f7;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.menu .generator button:hover {
+  opacity: 0.8;
+}
+.menu .generator button:active {
+  scale: 0.85;
+}
+
+@keyframes menuAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/*# sourceMappingURL=Menu.css.map */
