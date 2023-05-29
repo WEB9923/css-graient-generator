@@ -22,7 +22,7 @@
   user-select: none;
 }
 .menu .generator {
-  padding: 40px 15px;
+  padding: 40px 15px 20px;
 }
 .menu .generator .colors {
   display: flex;
@@ -43,6 +43,7 @@
 .menu .generator .colors div p {
   color: #635e5e;
   font-size: 18px;
+  font-family: "Poppins";
   font-weight: 700;
 }
 .menu .generator .colors div p::selection {
@@ -50,18 +51,21 @@
   color: #f7f7f7;
 }
 .menu .generator button {
-  padding: 10px 25px;
+  padding: 12px 35px;
   border-radius: 18px;
   border: none;
   outline: none;
-  background: radial-gradient(ellipse at top, #4b87c9, transparent), radial-gradient(ellipse at bottom, #7f4bbe, transparent);
+  background: radial-gradient(ellipse at top, #b553e6, #48709f, #db00b2);
   font-size: 18px;
   font-weight: 700;
-  color: #f7f7f7;
-  margin: 20px auto;
+  font-family: "Poppins";
+  color: #f0f0f0;
+  margin: 50px auto 20px;
   display: block;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .menu .generator button:hover {
   opacity: 0.8;

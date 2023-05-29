@@ -26,7 +26,7 @@
   }
 
   .generator {
-    padding: 40px 15px;
+    padding: 40px 15px 20px;
 
     .colors {
       display: flex;
@@ -48,6 +48,7 @@
         p {
           color: $color;
           font-size: $medium;
+          font-family: $font;
           font-weight: 700;
 
           &::selection {
@@ -59,19 +60,21 @@
     }
 
     button {
-      padding: 10px 25px;
+      padding: 12px 35px;
       border-radius: $medium;
       border: none;
       outline: none;
-      background: radial-gradient(ellipse at top, #4b87c9, transparent),
-      radial-gradient(ellipse at bottom, #7f4bbe, transparent);;
+      background: radial-gradient(ellipse at top, #b553e6, #48709f, #db00b2);
       font-size: $medium;
       font-weight: 700;
-      color: $white;
-      margin: 20px auto;
+      font-family: $font;
+      color: $bg2;
+      margin: 50px auto 20px;
       display: block;
       cursor: pointer;
       transition: all .3s ease;
+      text-transform: uppercase;
+      letter-spacing: 3px;
 
       &:hover {
         opacity: .8;

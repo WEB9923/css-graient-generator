@@ -8,11 +8,11 @@ export default function Menu({showVariable,generate,color1,color2}) {
                 <div className={"generator"}>
                     <div className={"colors"}>
                         <div>
-                            <div className={"color"} style={{backgroundColor:`${color1}`}}></div>
+                            <div className={"color"} style={{backgroundColor:`${color1}`}}/>
                             <p>{color1}</p>
                         </div>
                         <div>
-                            <div className={"color"} style={{backgroundColor:`${color2}`}}></div>
+                            <div className={"color"} style={{backgroundColor:`${color2}`}}/>
                             <p>{color2}</p>
                         </div>
                     </div>
