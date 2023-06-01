@@ -1,14 +1,13 @@
+import {useEffect, useState} from "react";
+import Menu from "../menu/Menu.jsx";
 import "./Wrapper.scss";
 import {IoMdColorPalette} from "react-icons/io";
-import Menu from "../menu/Menu.jsx";
-import {useEffect, useState} from "react";
-
-
 export default function Wrapper() {
     const [showMenu,setShowMenu] = useState(false);
     const [gradient,setGradient] = useState("");
     const [randomColor1,setRandomColor1] = useState("");
     const [randomColor2,setRandomColor2] = useState("");
+    const [selectVal,setSelectVal] = useState("");
     const handleShowMenu = () => {
         setShowMenu(!showMenu);
     }
@@ -20,7 +19,8 @@ export default function Wrapper() {
             random1 += str[Math.floor(Math.random() * 16)];
             random2 += str[Math.floor(Math.random() * 16)];
         }
-        let gradientStyle = `linear-gradient(to right, ${random1},${random2})`;
+        let gradientStyle =
+            `linear-gradient(to ${selectVal ? selectVal : "right"}, ${random1},${random2})`;
         setGradient(gradientStyle);
         setRandomColor1(random1);
         setRandomColor2(random2);
@@ -28,7 +28,9 @@ export default function Wrapper() {
     useEffect(() => {
         generateGradient();
     }, []);
-
+    const handleSelectedValue = (e) => {
+        setSelectVal(e.target.value)
+    }
     return (
         <>
             <div className={"wrapper"} style={{background:`${gradient}`}}>
@@ -45,6 +47,8 @@ export default function Wrapper() {
                     generate={generateGradient}
                     color1={randomColor1}
                     color2={randomColor2}
+                    detectSelectedVal={handleSelectedValue}
+                    selectedVal={selectVal}
                 />
             </div>
         </>
